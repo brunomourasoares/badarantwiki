@@ -1,19 +1,24 @@
 const express = require('express');
-const app = express();
 const path = require('path');
+
+const app = express();
 const router = express.Router();
 const port = process.env.port || 3000;
 
-app.use(express.static(__dirname + '/'));
 app.use(express.static(__dirname + '/public'));
 
-router.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/public/index.html'));
+const pages = ['agentes', 'armas', 'pacotes', 'protecao', 'mapas', 'modos', 'sprays', 'eventos'];
+const subpages = ['Gekko', 'Fade', 'Breach'];
+
+pages.forEach(page => {
+    router.get(`/${page}`, function(req, res) {
+        res.sendFile(path.join(__dirname, `/public/${page}.html`));
+    });
 });
 
-router.get('/agents', function(req, res) {
-    res.sendFile(path.join(__dirname + '/public/agents.html'));
-})
+router.use(function(req, res) {
+    res.status(404).sendFile(path.join(__dirname, '/public/404.html'));
+});
 
 app.use('/', router);
 app.listen(port, () => {
