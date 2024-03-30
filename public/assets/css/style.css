@@ -1,0 +1,60 @@
+@import url(reset.css);
+
+* {
+    font-family: "DIN Next Devanagari W05 Bold", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: url("../img/bg5.jpg") top center;
+    background-size: cover;
+}
+
+.nav-item {
+    width: 160px;
+    border: none;
+    text-align: center;
+    margin: 0 10px 0 0;
+
+    .nav-link {
+        background-color: rgb(247, 66, 90);
+        box-shadow: inset 0 0 0 0 #0f1923;
+        transition: ease-out 0.5s;
+        position: relative;
+    }
+    .nav-link:hover {
+        box-shadow: inset 300px 0 0 0 #0f1923;
+    }
+    .nav-link:focus {
+        box-shadow: inset 300px 0 0 0 #0f1923;
+    }
+
+    .dropdown-menu {
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background-color: transparent;
+
+        .dropdown-item {
+            padding: 7px 0 0 0;
+            margin: 0 0 2px 0;
+            height: 40px;
+            text-align: center;
+            background-color: rgb(247, 66, 90);
+            box-shadow: inset 0 0 0 0 #0f1923;
+            transition: ease-out 0.5s;
+            position: relative;
+        }
+        .dropdown-item:hover {
+            background-color: #0f1923;
+            box-shadow: inset 300px 0 0 0 #0f1923;
+        }
+        .dropdown-item:focus {
+            background-color: #0f1923;
+        }
+        .dropdown-item:first-of-type {
+            margin-top: 5px;
+        }
+    }
+}
