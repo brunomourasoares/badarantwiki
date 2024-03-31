@@ -8,7 +8,6 @@ const port = process.env.port || 3000;
 app.use(express.static(__dirname + '/public'));
 
 const pages = ['agentes', 'armas', 'pacotes', 'protecao', 'mapas', 'modos', 'sprays', 'eventos'];
-const subpages = ['Gekko', 'Fade', 'Breach'];
 
 pages.forEach(page => {
     router.get(`/${page}`, function(req, res) {
