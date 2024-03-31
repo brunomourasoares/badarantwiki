@@ -19,11 +19,11 @@ nav.innerHTML = `
                     <a class="nav-link fw-bold active" aria-current="page" href="/agentes/" role="button">AGENTES</a>
                 </li>
                 <li class="nav-item dropdown border border-0 text-center">
-                    <a class="nav-link dropdown-toggle fw-bold active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">EQUIPAMENTOS</a>
+                    <a class="nav-link dropdown-toggle fw-bold active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">ARMARIA</a>
                     <ul class="dropdown-menu border border-0 rounded-0 p-0 bg-transparent">
                         <li><a class="dropdown-item" href="/armas/">ARMAS</a></li>
                         <li><a class="dropdown-item" href="/pacotes/">PACOTES</a></li>
-                        <li><a class="dropdown-item" href="/protecao/">PROTEÇÃO</a></li>
+                        <li><a class="dropdown-item" href="/escudos/">ESCUDOS</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown border border-0 text-center">
