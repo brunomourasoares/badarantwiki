@@ -21,13 +21,13 @@
     <!--// Carousel //-->
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="3000">
+            <div class="carousel-item active pt-4 mt-5" data-bs-interval="3000">
                 <img src="./assets/img/carousel1.jpg" class="d-block w-100" alt="Carousel 1" title="Carousel 1">
             </div>
-            <div class="carousel-item" data-bs-interval="3000">
+            <div class="carousel-item pt-4 mt-5" data-bs-interval="3000">
                 <img src="./assets/img/carousel2.jpg" class="d-block w-100" alt="Carousel 2" title="Carousel 2">
             </div>
-            <div class="carousel-item" data-bs-interval="3000">
+            <div class="carousel-item pt-4 mt-5" data-bs-interval="3000">
                 <img src="./assets/img/carousel3.jpg" class="d-block w-100" alt="Carousel 3" title="Carousel 3">
             </div>
         </div>
@@ -48,8 +48,8 @@
                     <p class="lead text-body-secondary">Aqui terá uma introdução sobre os agentes em geral.</p>
                     <p class="text-body-secondary">No botão abaixo, você terá acesso a informação de todos os agentes.</p>
                     <div class="d-flex justify-content-center">
-                        <div class="nav-item border border-black">
-                            <a class="nav-link py-2" href="/agentes/" role="button" title="Agentes">AGENTES</a>
+                        <div class="nav-item border border-0">
+                            <a class="nav-link px-5 pb-1 pt-2" href="/agentes/" role="button" title="Agentes">AGENTES</a>
                         </div>
                     </div>
                 </div>
@@ -83,16 +83,23 @@
                 </div>
             </div>
         </section>
+
         <section class="container">
             <div class="row pt-5 text-center">
                 <div class="row row-cols-1 mx-auto">
-                    <h1 class="fw-light">Mapas</h1>
-                    <p class="lead text-body-secondary px-3">Aqui terá uma introdução sobre os mapas em geral.</p>
-                    <p class="text-body-secondary">No botão abaixo, você terá acesso a informação de todos os mapas.</p>
+                    <h1 class="fw-light">Sobre o Jogo</h1>
+                    <p class="lead text-body-secondary px-3">Aqui terá uma introdução sobre a história, mapas e os modos de jogo.</p>
+                    <p class="text-body-secondary">Nos botões abaixo, você terá acesso a informação de cada tipo.</p>
                 </div>
-                <div class="d-flex justify-content-center">
-                    <div class="nav-item border border-black">
-                        <a class="nav-link py-2" href="/mapas/" role="button" title="Mapas">MAPAS</a>
+                <div class="d-flex justify-content-center column-gap-2">
+                    <div class="nav-item border border-0">
+                        <a class="nav-link w-auto px-3 px-sm-4 px-md-5 pb-1 pt-2 " href="/historia/" role="button" title="História">HISTÓRIA</a>
+                    </div>
+                    <div class="nav-item border border-0 w-auto px-md-5">
+                        <a class="nav-link w-auto px-3 px-sm-4 px-md-5 pb-1 pt-2" href="/mapas/" role="button" title="Mapas">MAPAS</a>
+                    </div>
+                    <div class="nav-item border border-0">
+                        <a class="nav-link w-auto px-3 px-sm-4 px-md-5 pb-1 pt-2" href="/modos/" role="button" title="Modos de Jogo">MODOS</a>
                     </div>
                 </div>
             </div>
@@ -100,9 +107,9 @@
                 <div class="row row-cols-1 row-cols-md-3 row-gap-3 justify-content-between">
                     <div class="col m-0 px-5 px-sm-0 px-md-3">
                         <div class="card shadow-sm">
-                            <img src="https://static1-br.millenium.gg/articles/9/40/79/@/84805-ascent-article_cover_bd-1.png" alt="Ascent" title="Ascent" class="bg-body-tertiary" />
+                            <img src="/assets/img/historia.jpg" alt="História do Valorant" title="História do Valorant" class="bg-body-tertiary" />
                             <div class="card-body">
-                                <p class="card-text">Um playground aberto para pequenas guerras de posição e atrito divide dois locais em Ascent. Cada local pode...</p>
+                                <p class="card-text">Um resumo curto sobre a historia do game, como tudo aconteceu e outras coisas mais sobre o mundo de valorant...</p>
                             </div>
                         </div>
                     </div>
@@ -110,7 +117,7 @@
                         <div class="card shadow-sm">
                             <img src="https://imageio.forbes.com/specials-images/imageserve/63b845e67098373db7429d7b/Valorant-map-Split/960x0.jpg" alt="Split" title="Split" class="bg-body-tertiary" />
                             <div class="card-body">
-                                <p class="card-text">Se você quiser ir longe, terá que subir. Um par de locais divididos por um centro elevado permite um movimento...</p>
+                                <p class="card-text">Falando um pouco sobre os mapas de valorant, quantos sao, quais nomes, quais modos e locais e informações no geral...</p>
                             </div>
                         </div>
                     </div>
@@ -118,7 +125,7 @@
                         <div class="card shadow-sm">
                             <img src="https://static.valorantzone.gg/news/2022/07/21122217/fracture-valorant.png" alt="Fracture" title="Fracture" class="bg-body-tertiary" />
                             <div class="card-body">
-                                <p class="card-text">Um centro de pesquisa ultrassecreto dividido por um experimento fracassado de radianita. Com opções de defesa em...</p>
+                                <p class="card-text">Descrevendo os modos de jogo do game, como funciona cada um deles e quais vantagens e desvantagens de cada um...</p>
                             </div>
                         </div>
                     </div>
@@ -128,19 +135,19 @@
         <section class="container">
             <div class="row pt-5 text-center">
                 <div class="row row-cols-1 mx-auto">
-                    <h1 class="fw-light">Equipamentos</h1>
+                    <h1 class="fw-light">Armamentos</h1>
                     <p class="lead text-body-secondary px-3">Aqui terá uma introdução sobre os equipamentos em geral.</p>
                     <p class="text-body-secondary">Nos botões abaixo, você terá acesso a informação de todos os equipamentos.</p>
                 </div>
-                <div class="d-flex justify-content-center">
-                    <div class="nav-item border border-black">
-                        <a class="nav-link py-2" href="/armas/" role="button" title="Armas">ARMAS</a>
+                <div class="d-flex justify-content-center column-gap-2">
+                    <div class="nav-item border border-0 px-md-5">
+                        <a class="nav-link w-auto px-3 px-sm-4 px-md-5 pb-1 pt-2" href="/armas/" role="button" title="Armas">ARMAS</a>
                     </div>
-                    <div class="nav-item border border-black">
-                        <a class="nav-link py-2" href="/pacotes/" role="button" title="Pacotes">PACOTES</a>
+                    <div class="nav-item border border-0 px-md-5">
+                        <a class="nav-link w-auto px-3 px-sm-4 px-md-5 pb-1 pt-2" href="/pacotes/" role="button" title="Pacotes">PACOTES</a>
                     </div>
-                    <div class="nav-item border border-black">
-                        <a class="nav-link py-2" href="/protecao/" role="button" title="Proteção">PROTEÇÃO</a>
+                    <div class="nav-item border border-0 px-md-5">
+                        <a class="nav-link w-auto px-3 px-sm-4 px-md-5 pb-1 pt-2" href="/escudos/" role="button" title="Escudos">ESCUDOS</a>
                     </div>
                 </div>
             </div>
@@ -148,25 +155,62 @@
                 <div class="row row-cols-1 row-cols-md-3 row-gap-3 justify-content-between">
                     <div class="col m-0 px-5 px-sm-0 px-md-3">
                         <div class="card shadow-sm">
-                            <img src="https://dummyimage.com/370x208/ffffff/000000.jpg" alt="Armas" title="Armas" class="bg-body-tertiary" />
+                            <img src="/assets/img/armas.png" alt="Armas" title="Armas" class="bg-body-tertiary" />
                             <div class="card-body">
-                                <p class="card-text">Descrição sobre as armas...</p>
+                                <p class="card-text">São várias, dos mais variado tipos e calibres...</p>
                             </div>
                         </div>
                     </div>
                     <div class="col m-0 px-5 px-sm-0 px-md-3">
                         <div class="card shadow-sm">
-                            <img src="https://dummyimage.com/370x208/ffffff/000000.jpg" alt="Pacotes" title="Pacotes" class="bg-body-tertiary" />
+                            <img src="/assets/img/pacotes.jpg" alt="Pacotes" title="Pacotes" class="bg-body-tertiary" />
                             <div class="card-body">
-                                <p class="card-text">Descrição sobre os pacotes...</p>
+                                <p class="card-text">Pacotes de skins com varios temas específicos...</p>
                             </div>
                         </div>
                     </div>
                     <div class="col m-0 px-5 px-sm-0 px-md-3">
                         <div class="card shadow-sm">
-                            <img src="https://dummyimage.com/370x208/ffffff/000000.jpg" alt="Escudos" title="Escudos" class="bg-body-tertiary" />
+                            <img src="/assets/img/protecao.png" alt="Escudos" title="Escudos" class="bg-body-tertiary" />
                             <div class="card-body">
-                                <p class="card-text">Descrição sobre os escudos...</p>
+                                <p class="card-text">Cada proteção serve para uma determinada função...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="row pt-5 text-center">
+                <div class="row row-cols-1 mx-auto">
+                    <h1 class="fw-light">Diversos</h1>
+                    <p class="lead text-body-secondary px-3">Aqui terá uma introdução sobre a categoria diversos em geral.</p>
+                    <p class="text-body-secondary">Nos botões abaixo, você terá acesso a informação de todos os diversos.</p>
+                </div>
+                <div class="d-flex justify-content-center column-gap-2">
+                    <div class="nav-item border border-0 w-auto px-md-5">
+                        <a class="nav-link w-auto px-3 px-sm-4 px-md-5 pb-1 pt-2" href="/sprays/" role="button" title="Sprays">SPRAYS</a>
+                    </div>
+                    <div class="nav-item border border-0 w-auto px-md-5">
+                        <a class="nav-link w-auto px-3 px-sm-4 px-md-5 pb-1 pt-2" href="/eventos/" role="button" title="Eventos">EVENTOS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="py-5">
+                <div class="row row-cols-1 row-cols-md-3 row-gap-3 justify-content-evenly">
+                    <div class="col m-0 px-5 px-sm-0 px-md-3">
+                        <div class="card shadow-sm">
+                            <img src="/assets/img/sprays.png" alt="Sprays" title="Sprays" class="bg-body-tertiary" />
+                            <div class="card-body">
+                                <p class="card-text">São vários modelos de sprays disponíveis para você se divertir e provocar adversários...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col m-0 px-5 px-sm-0 px-md-3">
+                        <div class="card shadow-sm">
+                            <img src="/assets/img/eventos.png" alt="Eventos" title="Eventos" class="bg-body-tertiary" />
+                            <div class="card-body">
+                                <p class="card-text">Informações sobre eventos realizados pela equipe do game e o que precisa para participar...</p>
                             </div>
                         </div>
                     </div>
