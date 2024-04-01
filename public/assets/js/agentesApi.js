@@ -4,19 +4,24 @@ const result = fetch(`https://valorant-api.com/v1/agents?language=pt-BR`)
 	return data;
 });
 
-const agentes = document.getElementById('agentes');
+const agentesHead = document.getElementById('agentes-head');
+const agentesBody = document.getElementById('agentes-body');
 
 result.then((data) => {
 	data.data.forEach((agente) => {
 		if (agente.isPlayableCharacter === true) {
 			const agenteDiv = document.createElement('div');
-			agenteDiv.classList.add('agente-menu', 'bg-body-tertiary', 'text-center', 'border', 'border-1', 'rounded-2', 'm-2');
+			agenteDiv.classList.add('agente-menu', 'bg-body-tertiary', 'border', 'border-1', 'rounded-2', 'cursor-pointer', 'text-center');
 			agenteDiv.innerHTML = `
 				<a href="#${agente.displayName}">
-					<img src="${agente.killfeedPortrait}" alt="${agente.displayName}" title="${agente.displayName}" width="120" height="60">
+					<img src="
+					${
+						agente.displayName != "Breach" && agente.displayName != "Jett" ? agente.killfeedPortrait : agente.displayName == "Breach" ? "/assets/img/breach_killfeed.png" : "/assets/img/jett_killfeed.png"
+					}
+					" alt="${agente.displayName}" title="${agente.displayName}" class="img-fluid h-auto mw-100" />
 				</a>
 			`;
-			agentes.appendChild(agenteDiv);
+			agentesHead.appendChild(agenteDiv);
 		}
 	});
 });
@@ -25,48 +30,48 @@ result.then((data) => {
 	data.data.forEach((agente) => {
 		if (agente.isPlayableCharacter === true) {
 			const agenteDiv = document.createElement('div');
-			agenteDiv.classList.add('agente-detalhes', 'd-flex', 'mt-5', 'pt-5', 'border-top');
+			agenteDiv.classList.add('agente-detalhes', 'd-flex', 'flex-column', 'flex-md-row', 'mt-5', 'pt-5', 'border-top');
 			agenteDiv.setAttribute('id', agente.displayName);
 			agenteDiv.innerHTML = `
-				<div class="me-5 border border-1 rounded-2 bg-body-tertiary" style="background: url('${agente.background}') center;">
-					<img src="${agente.fullPortraitV2}" alt="${agente.displayName}" width="600" height="500">
+				<div class="border border-1 rounded-2 bg-body-tertiary align-content-center" style="background: url('${agente.background}') no-repeat center; background-size: cover;">
+					<img src="${agente.fullPortraitV2}" alt="${agente.displayName}" title="${agente.displayName}" class="img-fluid h-auto mw-100" />
 				</div>
-				<div class="d-flex flex-column justify-content-between align-items-center">
+				<div class="d-flex flex-column justify-content-center justify-content-md-between align-items-center mt-4 mt-md-0">
 					<div class="text-center">
 						<h2 class="m-0 text-uppercase">${agente.displayName}</h2>
 						<p class="m-0">${agente.description}</p>
 					</div>
-					<div class="text-center">
+					<div class="text-center mt-4">
 						<h3>Classe</h3>
-						<div class="border border-1 rounded-2 bg-body-tertiary p-3 px-4 ">
+						<div class="border border-1 rounded-2 bg-body-tertiary p-4">
 							<p class="m-0">${agente.role.displayName}</p>
-							<img src="${agente.role.displayIcon}" alt="${agente.role.displayName}" title="${agente.role.description}" width="50" height="50"/>
+							<img src="${agente.role.displayIcon}" alt="${agente.role.displayName}" title="${agente.role.description}" width="50" height="50" />
 						</div>
 					</div>
-					<div class="text-center container-fluid">
+					<div class="text-center mt-4">
 						<h3 class="m-0">Habilidades</h3>
-						<div class="d-flex border border-1 rounded-2 bg-body-tertiary p-3 px-4 justify-content-between">
+						<div class="d-flex justify-content-between border border-1 rounded-2 bg-body-tertiary py-3 px-4 gap-4 ms-2 mx-lg-0">
 							<div class="text-center">
-								<img src="${agente.abilities[0].displayIcon}" alt="${agente.abilities[0].displayName}" title="${agente.abilities[0].description}" width="50" height="50">
+								<img src="${agente.abilities[0].displayIcon}" alt="${agente.abilities[0].displayName}" title="${agente.abilities[0].description}" width="50" height="50" />
 								<p class="m-0">${agente.abilities[0].displayName}</p>
 							</div>
 							<div class="text-center">
-								<img src="${agente.abilities[1].displayIcon}" alt="${agente.abilities[1].displayName}" title="${agente.abilities[1].description}" width="50" height="50">
+								<img src="${agente.abilities[1].displayIcon}" alt="${agente.abilities[1].displayName}" title="${agente.abilities[1].description}" width="50" height="50" />
 								<p class="m-0">${agente.abilities[1].displayName}</p>
 							</div>
 							<div class="text-center">
-								<img src="${agente.abilities[2].displayIcon}" alt="${agente.abilities[2].displayName}" title="${agente.abilities[2].description}" width="50" height="50">
+								<img src="${agente.abilities[2].displayIcon}" alt="${agente.abilities[2].displayName}" title="${agente.abilities[2].description}" width="50" height="50" />
 								<p class="m-0">${agente.abilities[2].displayName}</p>
 							</div>
 							<div class="text-center">
-								<img src="${agente.abilities[3].displayIcon}" alt="${agente.abilities[3].displayName}" title="${agente.abilities[3].description}" width="50" height="50">
+								<img src="${agente.abilities[3].displayIcon}" alt="${agente.abilities[3].displayName}" title="${agente.abilities[3].description}" width="50" height="50" />
 								<p class="m-0">${agente.abilities[3].displayName}</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			`;
-			agentes.appendChild(agenteDiv);
+			agentesBody.appendChild(agenteDiv);
 		}
 	});
 });
