@@ -1,6 +1,6 @@
 const result = fetch(`https://valorant-api.com/v1/agents?language=pt-BR`)
-.then((res) => res.json())
-.then((data) => {
+	.then((res) => res.json())
+	.then((data) => {
 	return data;
 });
 
@@ -10,10 +10,10 @@ result.then((data) => {
 	data.data.forEach((agente) => {
 		if (agente.isPlayableCharacter === true) {
 			const agenteDiv = document.createElement('div');
-			agenteDiv.classList.add('agente-menu', 'm-3', 'bg-body-tertiary', 'rounded-2', 'text-center', 'border', 'border-1');
+			agenteDiv.classList.add('agente-menu', 'bg-body-tertiary', 'text-center', 'border', 'border-1', 'rounded-2', 'm-2');
 			agenteDiv.innerHTML = `
-				<a href="#${agente.displayName}" title="${agente.displayName}">
-					<img src="${agente.killfeedPortrait}" alt="${agente.displayName}" width="120" height="60">
+				<a href="#${agente.displayName}">
+					<img src="${agente.killfeedPortrait}" alt="${agente.displayName}" title="${agente.displayName}" width="120" height="60">
 				</a>
 			`;
 			agentes.appendChild(agenteDiv);

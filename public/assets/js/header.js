@@ -2,13 +2,13 @@ const header = document.getElementById('header');
 const siteName = 'Badarant Wiki';
 
 const nav = document.createElement('nav');
-nav.classList.add('navbar', 'navbar-expand-lg', 'bg-light', 'fixed-top', 'bg-body-tertiary');
+nav.classList.add('navbar', 'navbar-expand-lg', 'bg-light', 'bg-body-tertiary');
 nav.innerHTML = `
     <div class="container-fluid">
         <a class="navbar-brand" href="/">
             <img src="/assets/img/favicon.png" alt="${siteName}" title="${siteName}" width="50" height="50" />BADARANT WIKI
         </a>
-        <button class="navbar-toggler me-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">

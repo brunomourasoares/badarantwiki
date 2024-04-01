@@ -4,18 +4,19 @@ const result = fetch(`https://valorant-api.com/v1/maps?language=pt-BR`)
 	return data;
 });
 
-const mapas = document.getElementById('mapas');
+const mapasHead = document.getElementById('mapas-head');
+const mapasBody = document.getElementById('mapas-body');
 
 result.then((data) => {
 	data.data.forEach((mapa) => {
 		const mapaMenuDiv = document.createElement('div');
-		mapaMenuDiv.classList.add('mapa-menu', 'bg-body-tertiary', 'border', 'border-1', 'rounded-2', 'm-2');
+		mapaMenuDiv.classList.add('mapa-menu', 'bg-body-tertiary', 'border', 'border-1', 'rounded-2', 'cursor-pointer');
 		mapaMenuDiv.innerHTML = `
-			<a href="#${mapa.displayName}" title="${mapa.displayName}">
-				<img src="${mapa.listViewIcon}" alt="${mapa.displayName}" width="200" height="80" />
+			<a href="#${mapa.displayName}">
+				<img src="${mapa.listViewIcon}" alt="${mapa.displayName}" title="${mapa.displayName}" class="img-fluid h-auto mw-100" />
 			</a>
 		`;
-		mapas.appendChild(mapaMenuDiv);
+		mapasHead.appendChild(mapaMenuDiv);
 	})
 });
 
@@ -39,26 +40,26 @@ result.then((data) => {
 					}
 				</p>
 				<div class="d-flex flex-column justify-content-center">
-					<div class="container d-flex flex-column justify-content-center flex-md-row p-0 mb-3 border border-1 rounded-2 bg-body-tertiary">
-						<div class="me-md-5 p-3">
+					<div class="d-flex flex-column flex-md-row p-0 mb-3 border border-1 rounded-2 bg-body-tertiary">
+						<div class="p-3">
 							<h3>Modo</h3>
-							<span class="text-secondary" style="cursor: default;">
+							<span class="text-secondary">
 							${
 								mapa.tacticalDescription != null ? mapa.tacticalDescription : mapa.displayName == 'The Range' ? 'Praticar' : 'Mata-Mata em Equipe'
 							}
 							</span>
 						</div>
-						<div class="ms-md-5 p-3">
+						<div class="p-3 ms-md-5">
 							<h3>Localizações</h3>
-							<div class="d-flex flex-column flex-md-row flex-wrap">
+							<div class="d-flex flex-column flex-sm-row flex-wrap">
 								${
 									mapa.callouts != null
 										? mapa.callouts
 												.map((callout) => {
 													if (callout.regionName != null && callout.superRegionName != null) {
-														return `<div> ${calloutCount++}. <span class="text-secondary lh-lg mb-5" style="cursor: default;">${callout.regionName} ${callout.superRegionName}</span>&nbsp;</div>`;
+														return `<div> ${calloutCount++}. <span class="text-secondary lh-lg mb-5">${callout.regionName} ${callout.superRegionName}</span>&nbsp;</div>`;
 													} else {
-														return `<span class="text-secondary" style="cursor: default;">Localização não disponível</span>`;
+														return `<span class="text-secondary">Localização não disponível</span>`;
 													}
 												})
 												.join('')
@@ -66,28 +67,28 @@ result.then((data) => {
 										? (() => {
 												let result = '';
 												for (let i = 0; i < mapaTheRangeLocalizacao.length; i++) {
-													result += `<div>${calloutCount++}. <span class="text-secondary lh-lg mb-5" style="cursor: default;">${mapaTheRangeLocalizacao[i]}</span>&nbsp;</div>`;
+													result += `<div>${calloutCount++}. <span class="text-secondary lh-lg mb-5">${mapaTheRangeLocalizacao[i]}</span>&nbsp;</div>`;
 												}
 												return result;
 											})()
-										: `<div><span class="text-secondary lh-lg mb-5" style="cursor: default;">Localização não disponível</span></div>`
+										: `<div><span class="text-secondary lh-lg mb-5">Localização não disponível</span></div>`
 								}
 							</div>
 						</div>
 					</div>
-					<div class="d-flex flex-column flex-md-row justify-content-center align-items-center border border-1 rounded-2 bg-body-tertiary p-2">
-						<div class="me-5">
-							<img src="${mapa.splash}" alt="${mapa.displayName}" width="100%" height="100%">
+					<div class="p-3 d-flex flex-column flex-sm-row border border-1 rounded-2 bg-body-tertiary">
+						<div class="justify-content-center mb-3 mb-sm-0 me-sm-3">
+							<img src="${mapa.splash}" alt="${mapa.displayName}" title="${mapa.displayName}" class="img-fluid h-auto mw-100" />
 						</div>
-						<div>
+						<div class="justify-content-center">
 							${
-								mapa.displayIcon != null ? `<img src="${mapa.displayIcon}" alt="${mapa.displayName}" width="100%" height="100%" />` : `<img src="/assets/img/${mapa.displayName.replace(' ', '_')}_minimap.png" alt="${mapa.displayName}" width="100%" height="100%" />`
+								mapa.displayIcon != null ? `<img src="${mapa.displayIcon}" alt="${mapa.displayName}" title="Mapa de ${mapa.displayName}" class="img-fluid h-auto mw-100" />` : `<img src="/assets/img/${mapa.displayName.replace(' ', '_')}_minimap.png" alt="${mapa.displayName}" title="Mapa de ${mapa.displayName}"  class="img-fluid h-auto mw-100" />`
 							}
 						</div>
 					</div>
 				</div>
-			</div>
 			`;
-			mapas.appendChild(mapaDetDiv);
+			mapasBody.appendChild(mapaDetDiv);
 	});
 });
+
