@@ -18,7 +18,7 @@ result.then((data) => {
 					${
 						agente.displayName != "Breach" && agente.displayName != "Jett" ? agente.killfeedPortrait : agente.displayName == "Breach" ? "/assets/img/breach_killfeed.png" : "/assets/img/jett_killfeed.png"
 					}
-					" alt="${agente.displayName}" title="${agente.displayName}" class="img-fluid h-auto mw-100" />
+					" alt="${agente.displayName}" title="${agente.displayName}" class="img-fluid" />
 				</a>
 			`;
 			agentesHead.appendChild(agenteDiv);
@@ -34,7 +34,7 @@ result.then((data) => {
 			agenteDiv.setAttribute('id', agente.displayName);
 			agenteDiv.innerHTML = `
 				<div class="border border-1 rounded-2 bg-body-tertiary align-content-center" style="background: url('${agente.background}') no-repeat center; background-size: cover;">
-					<img src="${agente.fullPortraitV2}" alt="${agente.displayName}" title="${agente.displayName}" class="img-fluid h-auto mw-100" />
+					<img src="${agente.fullPortraitV2}" alt="${agente.displayName}" title="${agente.displayName}" class="img-fluid" />
 				</div>
 				<div class="d-flex flex-column justify-content-center justify-content-md-between align-items-center mt-4 mt-md-0">
 					<div class="text-center">
@@ -50,7 +50,7 @@ result.then((data) => {
 					</div>
 					<div class="text-center mt-4">
 						<h3 class="m-0">Habilidades</h3>
-						<div class="d-flex justify-content-between border border-1 rounded-2 bg-body-tertiary py-3 px-4 gap-4 ms-2 mx-lg-0">
+						<div class="d-flex ${agente.displayName == 'KAY/O' ? 'justify-content-evenly' : 'justify-content-between' } border border-1 rounded-2 bg-body-tertiary py-3 px-4 gap-4 ms-2 mx-lg-0 mt-2">
 							<div class="text-center">
 								<img src="${agente.abilities[0].displayIcon}" alt="${agente.abilities[0].displayName}" title="${agente.abilities[0].description}" width="50" height="50" />
 								<p class="m-0">${agente.abilities[0].displayName}</p>

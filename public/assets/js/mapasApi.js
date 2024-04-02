@@ -13,7 +13,7 @@ result.then((data) => {
 		mapaMenuDiv.classList.add('mapa-menu', 'bg-body-tertiary', 'border', 'border-1', 'rounded-2', 'cursor-pointer');
 		mapaMenuDiv.innerHTML = `
 			<a href="#${mapa.displayName}">
-				<img src="${mapa.listViewIcon}" alt="${mapa.displayName}" title="${mapa.displayName}" class="img-fluid h-auto mw-100" />
+				<img src="${mapa.listViewIcon}" alt="${mapa.displayName}" title="${mapa.displayName}" class="img-fluid" />
 			</a>
 		`;
 		mapasHead.appendChild(mapaMenuDiv);
@@ -78,12 +78,14 @@ result.then((data) => {
 					</div>
 					<div class="p-3 d-flex flex-column flex-sm-row border border-1 rounded-2 bg-body-tertiary">
 						<div class="justify-content-center mb-3 mb-sm-0 me-sm-3">
-							<img src="${mapa.splash}" alt="${mapa.displayName}" title="${mapa.displayName}" class="img-fluid h-auto mw-100" />
+							<img src="${mapa.splash}" alt="${mapa.displayName}" title="${mapa.displayName}" class="img-fluid" />
 						</div>
 						<div class="justify-content-center">
+						<img src="
 							${
-								mapa.displayIcon != null ? `<img src="${mapa.displayIcon}" alt="${mapa.displayName}" title="Mapa de ${mapa.displayName}" class="img-fluid h-auto mw-100" />` : `<img src="/assets/img/${mapa.displayName.replace(' ', '_')}_minimap.png" alt="${mapa.displayName}" title="Mapa de ${mapa.displayName}"  class="img-fluid h-auto mw-100" />`
+								mapa.displayIcon != null ? `${mapa.displayIcon}" ` : `/assets/img/${mapa.displayName.replace(' ', '_')}_minimap.png`
 							}
+							" alt="${mapa.displayName}" title="Mapa de ${mapa.displayName}" class="img-fluid" />
 						</div>
 					</div>
 				</div>
