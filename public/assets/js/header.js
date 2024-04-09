@@ -19,9 +19,6 @@ nav.innerHTML = `
                     <li class="nav-item border border-0 text-center flex-grow-1">
                         <a class="nav-link fw-bold active" aria-current="page" href="/" title="Início" role="button">INÍCIO</a>
                     </li>
-                    <li class="nav-item border border-0 text-center flex-grow-1">
-                        <a class="nav-link fw-bold active" aria-current="page" href="/agentes/" title="Agentes" role="button">AGENTES</a>
-                    </li>
                     <li class="nav-item dropdown border border-0 text-center flex-grow-1">
                         <a class="nav-link dropdown fw-bold active" title="Sobre o Jogo" role="button" data-bs-toggle="dropdown" aria-expanded="false">SOBRE O JOGO</a>
                         <ul class="dropdown-menu border border-0 bg-transparent p-0 m-0 w-100">
@@ -30,8 +27,11 @@ nav.innerHTML = `
                             <li><a class="dropdown-item" title="Modos de Jogo" href="/modos/">MODOS DE JOGO</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item border border-0 text-center flex-grow-1">
+                        <a class="nav-link fw-bold active" aria-current="page" href="/agentes/" title="Agentes" role="button">AGENTES</a>
+                    </li>
                     <li class="nav-item dropdown border border-0 text-center flex-grow-1">
-                        <a class="nav-link dropdown fw-bold active" title="Armamentos" role="button" data-bs-toggle="dropdown" aria-expanded="false">ARMAMENTOS</a>
+                        <a class="nav-link dropdown fw-bold active" title="Armamentos" role="button" data-bs-toggle="dropdown" aria-expanded="false">ARSENAL</a>
                         <ul class="dropdown-menu border border-0 bg-transparent p-0 m-0 w-100">
                             <li><a class="dropdown-item" title="Armas" href="/armas/">ARMAS</a></li>
                             <li><a class="dropdown-item" title="Pacotes" href="/pacotes/">PACOTES</a></li>

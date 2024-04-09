@@ -25,7 +25,7 @@ div.innerHTML = `
                 <img src="/assets/img/valorant-icon.png" alt="Valorant" title="Valorant" width="70" height="70">
             </a>
         </div>
-        <p class="text-body-secondary">© 2020-2024 Riot Games, Inc. RIOT GAMES, VALORANT and any associated logos are trademarks, service marks, and/or registered trademarks of Riot Games, Inc.</p>
+        <p class="text-body-secondary">© 2020-2024 Riot Games, Inc. RIOT GAMES, VALORANT e todos os logotipos associados são marcas comerciais, marcas de serviço e/ou marcas registradas da Riot Games, Inc.</p>
         <br>
     </div>`
     footer.appendChild(div);
