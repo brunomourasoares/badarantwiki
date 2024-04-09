@@ -1,4 +1,4 @@
-const result = fetch(`https://valorant-api.com/v1/maps?language=pt-BR`)
+const resultado = fetch(`https://valorant-api.com/v1/maps?language=pt-BR`)
 	.then((res) => res.json())
 	.then((data) => {
 	return data;
@@ -7,7 +7,7 @@ const result = fetch(`https://valorant-api.com/v1/maps?language=pt-BR`)
 const mapasHead = document.getElementById('mapas-head');
 const mapasBody = document.getElementById('mapas-body');
 
-result.then((data) => {
+resultado.then((data) => {
 	data.data.forEach((mapa) => {
 		const mapaMenuDiv = document.createElement('div');
 		mapaMenuDiv.classList.add('mapa-menu', 'bg-body-tertiary', 'border', 'border-1', 'rounded-2', 'cursor-pointer');
@@ -27,13 +27,13 @@ mapaPiazzaDescricao = 'Baseado no mapa Ascent, Piazza é um mapa com muitos corr
 mapaTheRangeDescricao = 'As ilhas em ruínas da Cordilheira são apenas alguns dos muitos pedaços de terra veneziana permanentemente suspensos a centenas de metros no céu após o desastre de 10 AFL na cidade causado por uma explosão de pico. Anteriormente parte das ilhas de Poveglia, o Range é agora utilizado pelo Protocolo VALORANT como campo de treinamento, contendo também alguns escritórios para alguns de seus agentes seniores.';
 mapaTheRangeLocalizacao = ['Ponto de partida do Parkour', 'Alvo de precisão', 'Boneco de treinamento', 'Alvo de treinamento flutuantes', 'Entrada para o porão do escritório de Brimstones', 'Escritório de Cyphers', 'Quadro de avisos', 'Campo de tiro', 'Alcance Aberto', 'Teletransportador para desarmar e plantar Spike'];
 
-result.then((data) => {
+resultado.then((data) => {
 	data.data.forEach((mapa) => {
-			const mapaDetDiv = document.createElement('div');
-			mapaDetDiv.classList.add('mapa-detalhes', 'd-flex', 'flex-column', 'mt-5', 'pt-5', 'border-top');
-			mapaDetDiv.setAttribute('id', mapa.displayName);
+			const mapaDetalhesDiv = document.createElement('div');
+			mapaDetalhesDiv.classList.add('mapa-detalhes', 'd-flex', 'flex-column', 'mt-5', 'pt-5', 'border-top');
+			mapaDetalhesDiv.setAttribute('id', mapa.displayName);
 			let calloutCount = 1;
-			mapaDetDiv.innerHTML = `
+			mapaDetalhesDiv.innerHTML = `
 				<h2 class="text-center">${mapa.displayName.toUpperCase()}</h2>
 				<p>${
 						mapa.narrativeDescription != null ? mapa.narrativeDescription : mapa.displayName == 'District' ? mapaDistrictDescricao : mapa.displayName == 'Kasbah' ? mapaKasbahDescricao : mapa.displayName == 'The Range' ? mapaTheRangeDescricao : 'Descrição não disponível'
@@ -90,7 +90,7 @@ result.then((data) => {
 					</div>
 				</div>
 			`;
-			mapasBody.appendChild(mapaDetDiv);
+			mapasBody.appendChild(mapaDetalhesDiv);
 	});
 });
 
