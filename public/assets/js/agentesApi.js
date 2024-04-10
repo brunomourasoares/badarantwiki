@@ -49,23 +49,23 @@ async function getAgents() {
 								<img src="${agente.role.displayIcon}" alt="${agente.role.displayName}" title="${agente.role.description}" width="50" height="50" />
 							</div>
 						</div>
-						<div class="text-center mt-4">
+						<div class="text-center mt-4 w-100">
 							<h3 class="m-0">Habilidades</h3>
-							<div class="d-flex justify-content-between border border-1 rounded-2 bg-body-tertiary py-3 px-3 ms-2 mx-lg-0 mt-2 column-gap-md-5">
-								<div class="text-center">
-									<img src="${agente.abilities[0].displayIcon}" alt="${agente.abilities[0].displayName}" title="${agente.abilities[0].description}" width="50" height="50" />
+							<div class="d-flex row row-cols-2 row-cols-lg-4 row-gap-3 justify-content-between border border-1 rounded-2 bg-body-tertiary py-3 px-3 ms-2 mx-lg-0 mt-2">
+								<div class="text-center col">
+									<img src="${agente.abilities[0].displayIcon}" alt="${agente.abilities[0].displayName}" title="${agente.abilities[0].description}" width="40" height="40" />
 									<p class="m-0">${agente.abilities[0].displayName}</p>
 								</div>
-								<div class="text-center">
-									<img src="${agente.abilities[1].displayIcon}" alt="${agente.abilities[1].displayName}" title="${agente.abilities[1].description}" width="50" height="50" />
+								<div class="text-center col">
+									<img src="${agente.abilities[1].displayIcon}" alt="${agente.abilities[1].displayName}" title="${agente.abilities[1].description}" width="40" height="40" />
 									<p class="m-0">${agente.abilities[1].displayName}</p>
 								</div>
-								<div class="text-center">
-									<img src="${agente.abilities[2].displayIcon}" alt="${agente.abilities[2].displayName}" title="${agente.abilities[2].description}" width="50" height="50" />
+								<div class="text-center col">
+									<img src="${agente.abilities[2].displayIcon}" alt="${agente.abilities[2].displayName}" title="${agente.abilities[2].description}" width="40" height="40" />
 									<p class="m-0">${agente.abilities[2].displayName}</p>
 								</div>
-								<div class="text-center">
-									<img src="${agente.abilities[3].displayIcon}" alt="${agente.abilities[3].displayName}" title="${agente.abilities[3].description}" width="50" height="50" />
+								<div class="text-center col">
+									<img src="${agente.abilities[3].displayIcon}" alt="${agente.abilities[3].displayName}" title="${agente.abilities[3].description}" width="40" height="40" />
 									<p class="m-0">${agente.abilities[3].displayName}</p>
 								</div>
 							</div>
