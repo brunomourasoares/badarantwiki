@@ -1,6 +1,6 @@
 {
   "name": "badarantwiki",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Valorant Wiki",
   "author": "Bruno e Steven",
   "main": "app.js",
