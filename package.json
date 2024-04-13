@@ -7,7 +7,8 @@
   "license": "ISC",
   "keywords": [
     "valorant",
-    "wiki"
+    "wiki",
+    "valorant wiki"
   ],
   "scripts": {
     "start": "node app.js"
