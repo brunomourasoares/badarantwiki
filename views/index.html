@@ -6,10 +6,10 @@
     <meta name="description" content="">
     <meta name="author" content="Bruno and Steven">
     <title>Badarant Wiki - Início</title>    
-    <link rel="apple-touch-icon" href="/assets/img/favicon.png" sizes="180x180">
-    <link rel="icon" href="/assets/img/favicon.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="/assets/img/favicon.png" sizes="16x16" type="image/png">
-    <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+    <link rel="apple-touch-icon" href="/img/favicon.png" sizes="180x180">
+    <link rel="icon" href="/img/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/img/favicon.png" sizes="16x16" type="image/png">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
@@ -19,22 +19,22 @@
     </header>
 
     <!--// Carousel //-->
-    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div id="carouselFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="3000">
-                <img src="./assets/img/carousel1.jpg" class="d-block w-100" alt="Carousel 1" title="Carousel 1">
+                <img src="/img/carousel1.jpg" class="d-block w-100" alt="Carousel 1" title="Carousel 1">
             </div>
             <div class="carousel-item" data-bs-interval="3000">
-                <img src="./assets/img/carousel2.jpg" class="d-block w-100" alt="Carousel 2" title="Carousel 2">
+                <img src="/img/carousel2.jpg" class="d-block w-100" alt="Carousel 2" title="Carousel 2">
             </div>
             <div class="carousel-item" data-bs-interval="3000">
-                <img src="./assets/img/carousel3.jpg" class="d-block w-100" alt="Carousel 3" title="Carousel 3">
+                <img src="/img/carousel3.jpg" class="d-block w-100" alt="Carousel 3" title="Carousel 3">
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev" title="Foto anterior">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFade" data-bs-slide="prev" title="Foto anterior">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next" title="Próxima foto">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselFade" data-bs-slide="next" title="Próxima foto">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </button>
     </div>
@@ -45,31 +45,23 @@
             <div class="row pt-5 text-center">
                 <div class="row row-cols-1 mx-auto">
                     <h1 class="fw-light">Sobre o Jogo</h1>
-                    <p class="lead text-body-secondary px-3">Aqui terá uma introdução sobre a história, mapas e os modos de jogo.</p>
+                    <p class="lead text-body-secondary px-3">Aqui terá uma introdução sobre os mapas, modos de jogo e os rankings.</p>
                     <p class="text-body-secondary">Nos botões abaixo, você terá acesso a informação de cada tipo.</p>
                 </div>
                 <div class="d-flex justify-content-center column-gap-2">
-                    <div class="nav-item border border-0">
-                        <a class="nav-link w-auto px-3 px-sm-4 px-md-5 pb-1 pt-2 " href="/historia/" role="button" title="História">HISTÓRIA</a>
-                    </div>
-                    <div class="nav-item border border-0 w-auto px-md-5">
+                    <div class="nav-item border border-0 px-md-5">
                         <a class="nav-link w-auto px-3 px-sm-4 px-md-5 pb-1 pt-2" href="/mapas/" role="button" title="Mapas">MAPAS</a>
                     </div>
-                    <div class="nav-item border border-0">
+                    <div class="nav-item border border-0 px-md-5">
                         <a class="nav-link w-auto px-3 px-sm-4 px-md-5 pb-1 pt-2" href="/modos/" role="button" title="Modos de Jogo">MODOS</a>
+                    </div>
+                    <div class="nav-item border border-0 px-md-5">
+                        <a class="nav-link w-auto px-3 px-sm-4 px-md-5 pb-1 pt-2 " href="/rankings/" role="button" title="Rankings">RANKINGS</a>
                     </div>
                 </div>
             </div>
             <div class="pt-5">
                 <div class="row row-cols-1 row-cols-md-3 row-gap-3 justify-content-between">
-                    <div class="col m-0 px-5 px-sm-0 px-md-3">
-                        <div class="card shadow-sm">
-                            <img src="assets/img/historia.jpg" alt="História do Valorant" title="História do Valorant" class="bg-body-tertiary card-img-top" />
-                            <div class="card-body">
-                                <p class="card-text">Um resumo curto sobre a historia do game, como tudo aconteceu e outras coisas mais sobre o mundo de valorant...</p>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col m-0 px-5 px-sm-0 px-md-3">
                         <div class="card shadow-sm">
                             <img src="https://imageio.forbes.com/specials-images/imageserve/63b845e67098373db7429d7b/Valorant-map-Split/960x0.jpg" alt="Split" title="Split" class="bg-body-tertiary card-img-top" />
@@ -80,9 +72,17 @@
                     </div>
                     <div class="col m-0 px-5 px-sm-0 px-md-3">
                         <div class="card shadow-sm">
-                            <img src="assets/img/modos.jpg" alt="Fracture" title="Fracture" class="bg-body-tertiary card-img-top" />
+                            <img src="/img/modos.jpg" alt="Fracture" title="Fracture" class="bg-body-tertiary card-img-top" />
                             <div class="card-body">
                                 <p class="card-text">Descrevendo os modos de jogo do game, como funciona cada um deles e quais vantagens e desvantagens de cada um...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col m-0 px-5 px-sm-0 px-md-3">
+                        <div class="card shadow-sm">
+                            <img src="/img/rankings.jpg" alt="Rankings do Valorant" title="Rankings do Valorant" class="bg-body-tertiary card-img-top" />
+                            <div class="card-body">
+                                <p class="card-text">Um resumo curto sobre quais são os rankings do game, o que é necessário, dicas e outras coisas mais sobre o assunto...</p>
                             </div>
                         </div>
                     </div>
@@ -106,7 +106,7 @@
                 <div class="row row-cols-1 row-cols-md-3 row-gap-3 justify-content-between">
                     <div class="col m-0 px-5 px-sm-0 px-md-3">
                         <div class="card shadow-sm">
-                            <img src="assets/img/gekko_black.jpg" alt="Gekko" title="Gekko" class="bg-body-tertiary card-img-top">
+                            <img src="/img/gekko_black.jpg" alt="Gekko" title="Gekko" class="bg-body-tertiary card-img-top">
                             <div class="card-body">
                                 <p class="card-text">Gekko, de Los Angeles, lidera um grupo muito unido de criaturas caóticas. Seus amigos atropelam tudo que encontra...</p>
                             </div>
@@ -114,7 +114,7 @@
                     </div>
                     <div class="col m-0 px-5 px-sm-0 px-md-3">
                         <div class="card shadow-sm">
-                            <img src="assets/img/fade_black.jpg" alt="Fade" title="Fade" class="bg-body-tertiary card-img-top">
+                            <img src="/img/fade_black.jpg" alt="Fade" title="Fade" class="bg-body-tertiary card-img-top">
                             <div class="card-body">
                                 <p class="card-text">Fade, uma caçadora de recompensas turca, ela usa o poder dos pesadelos para capturar os segredos mais profundos...</p>
                             </div>
@@ -122,7 +122,7 @@
                     </div>
                     <div class="col m-0 px-5 px-sm-0 px-md-3">
                         <div class="card shadow-sm">
-                            <img src="assets/img/breach_black.jpg" alt="Breach" title="Breach" class="bg-body-tertiary card-img-top">
+                            <img src="/img/breach_black.jpg" alt="Breach" title="Breach" class="bg-body-tertiary card-img-top">
                             <div class="card-body">
                                 <p class="card-text">Breach, o homem-biônico sueco, dispara poderosos jatos cinéticos para forçar a abertura de um caminho para o ataque...</p>
                             </div>
@@ -145,16 +145,13 @@
                     <div class="nav-item border border-0 px-md-5">
                         <a class="nav-link w-auto px-3 px-sm-4 px-md-5 pb-1 pt-2" href="/pacotes/" role="button" title="Pacotes">PACOTES</a>
                     </div>
-                    <div class="nav-item border border-0 px-md-5">
-                        <a class="nav-link w-auto px-3 px-sm-4 px-md-5 pb-1 pt-2" href="/escudos/" role="button" title="Escudos">ESCUDOS</a>
-                    </div>
                 </div>
             </div>
             <div class="pt-5">
-                <div class="row row-cols-1 row-cols-md-3 row-gap-3 justify-content-between">
+                <div class="row row-cols-1 row-cols-md-3 row-gap-3 justify-content-evenly">
                     <div class="col m-0 px-5 px-sm-0 px-md-3">
                         <div class="card shadow-sm">
-                            <img src="/assets/img/armas.png" alt="Armas" title="Armas" class="bg-body-tertiary card-img-top" />
+                            <img src="/img/armas.png" alt="Armas" title="Armas" class="bg-body-tertiary card-img-top" />
                             <div class="card-body">
                                 <p class="card-text">São várias, dos mais variado tipos e calibres...</p>
                             </div>
@@ -162,17 +159,9 @@
                     </div>
                     <div class="col m-0 px-5 px-sm-0 px-md-3">
                         <div class="card shadow-sm">
-                            <img src="/assets/img/pacotes.jpg" alt="Pacotes" title="Pacotes" class="bg-body-tertiary card-img-top" />
+                            <img src="/img/pacotes.jpg" alt="Pacotes" title="Pacotes" class="bg-body-tertiary card-img-top" />
                             <div class="card-body">
                                 <p class="card-text">Pacotes de skins com varios temas específicos...</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col m-0 px-5 px-sm-0 px-md-3">
-                        <div class="card shadow-sm">
-                            <img src="/assets/img/protecao.png" alt="Escudos" title="Escudos" class="bg-body-tertiary card-img-top" />
-                            <div class="card-body">
-                                <p class="card-text">Escolha sua proteção preferida, pesada ou leve...</p>
                             </div>
                         </div>
                     </div>
@@ -199,7 +188,7 @@
                 <div class="row row-cols-1 row-cols-md-3 row-gap-3 justify-content-evenly">
                     <div class="col m-0 px-5 px-sm-0 px-md-3">
                         <div class="card shadow-sm rounded-2">
-                            <img src="/assets/img/sprays.png" alt="Sprays" title="Sprays" class="bg-body-tertiary card-img-top" />
+                            <img src="/img/sprays.png" alt="Sprays" title="Sprays" class="bg-body-tertiary card-img-top" />
                             <div class="card-body">
                                 <p class="card-text">São vários modelos de sprays disponíveis para você se divertir e provocar adversários...</p>
                             </div>
@@ -207,7 +196,7 @@
                     </div>
                     <div class="col m-0 px-5 px-sm-0 px-md-3">
                         <div class="card shadow-sm">
-                            <img src="/assets/img/eventos.png" alt="Eventos" title="Eventos" class="bg-body-tertiary card-img-top" />
+                            <img src="/img/eventos.png" alt="Eventos" title="Eventos" class="bg-body-tertiary card-img-top" />
                             <div class="card-body">
                                 <p class="card-text">Informações sobre eventos realizados pela equipe do game e o que precisa para participar...</p>
                             </div>
@@ -222,17 +211,10 @@
     <footer id="footer">
     </footer>
 
-    <!--// Back To Top Button //-->
-    <button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
-            <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"></path>
-        </svg>
-    </button>
-
     <!--// Scripts //-->
-    <script src="/assets/js/header.js"></script>
-    <script src="/assets/js/footer.js"></script>
-    <script src="/assets/js/utils.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/footer.js"></script>
+    <script src="/js/utils.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
