@@ -39,12 +39,12 @@ async function getMapas() {
 			let calloutCount = 1;
 			mapaDetalhesDiv.innerHTML = `
 				<h2 class="text-center">${mapa.displayName.toUpperCase()}</h2>
-				<p>${
+				<p class="text-center">${
 						mapa.narrativeDescription != null ? mapa.narrativeDescription : mapa.displayName == 'District' ? mapaDistrictDescricao : mapa.displayName == 'Kasbah' ? mapaKasbahDescricao : mapa.displayName == 'The Range' ? mapaTheRangeDescricao : 'Descrição não disponível'
 					}
 				</p>
 				<div class="d-flex flex-column justify-content-center">
-					<div class="d-flex flex-column flex-md-row p-0 mb-3 border border-1 rounded-2 bg-body-tertiary">
+					<div class="d-flex flex-column flex-md-row p-0 mb-3">
 						<div class="p-3">
 							<h3>Modo</h3>
 							<span class="text-secondary">

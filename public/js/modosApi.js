@@ -30,32 +30,30 @@ async function getModos() {
 				modoDiv.classList.add('modo-detalhes', 'd-flex', 'flex-column', 'flex-md-row', 'my-5', 'pt-5', 'border-top');
 				modoDiv.setAttribute('id', modo.displayName);
 				modoDiv.innerHTML = `
-				<div class="d-flex flex-column justify-content-between w-100 row-gap-4 row-gap-md-0 mb-4">
-					<div class="text-center">
-						<img src="${modo.displayIcon}" alt="Modo ${modo.displayName}" title="Modo ${modo.displayName}" width="100" height="100" />
+					<div class="d-flex flex-column flex-md-row justify-content-center w-100">
+						<div class="border border-1 rounded-2 bg-body-tertiary mb-5 mb-md-0" style="max-width: 400px;">
+							<img src=${modo.displayName == 'Batalha Nevada' ? `"/img/snowball.jpg" class="img-fluid px-3"` : `"${modo.listViewIconTall}" class="img-fluid"`} alt="Modo ${modo.displayName}" title="Modo ${modo.displayName}" 
+						</div>
 					</div>
-					<div class="text-center">
-						<h2>MODO</h2>
-						<h4>${modo.displayName}</h4>
-					</div>
-					<div class="text-center">
-						<h2>TEMPO</h2>
-						<h4>${modo.duration != null ? modo.duration : 'Indefinido'}
-						</h4>
-					</div>
-					<div class="text-center">
-						<h2>DESCRIÇÃO</h2>
-						<h4>${modoDescricao[cont]}</h4>
-					</div>
-				</div>
-				<div class="d-flex justify-content-evenly w-100">
-					<div class="border border-1 rounded-2 bg-body-tertiary" style="max-width: 400px;">
-						<img src=${modo.displayName == 'Batalha Nevada' ? `"/img/snowball.jpg" class="img-fluid border border-1 rounded-2 px-3"` : `"${modo.listViewIconTall}" class="img-fluid"`} alt="Modo ${modo.displayName}" title="Modo ${modo.displayName}" 
-					</div>
-				</div>
-				`;
-			cont++;
+					<div class="d-flex flex-column justify-content-between w-100 row-gap-4 row-gap-md-0 mx-md-5">
+						<div class="text-center">
+							<img src="${modo.displayIcon}" alt="Modo ${modo.displayName}" title="Modo ${modo.displayName}" width="100" height="100" />
+						</div>
+						<div class="text-center">
+							<h2>MODO</h2>
+							<p>${modo.displayName}</p>
+						</div>
+						<div class="text-center">
+							<h2>TEMPO</h2>
+							<p>${modo.duration != null ? modo.duration : 'Indefinido'}</p>
+						</div>
+						<div class="text-center">
+							<h2>DESCRIÇÃO</h2>
+							<p class="m-0">${modoDescricao[cont]}</p>
+						</div>
+					</div>`;
 			modosBody.appendChild(modoDiv);
+			cont++;
 			}
 		});
 		} catch (error) {
