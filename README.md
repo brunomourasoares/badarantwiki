@@ -15,7 +15,7 @@ Este projeto consiste em um Fansite do game Valorant e foi criado utilizando a p
   - **Armas**
   - **Pacotes**
 - **Diversos**
-  - **Spray**
+  - **Sprays**
   - **Eventos**
 
 ## <a href="#"><img src="https://raw.githubusercontent.com/brunomourasoares/portfolio/main/assets/img/technology.png" width="20" /></a> Tecnologias utilizadas
@@ -24,4 +24,4 @@ Este projeto consiste em um Fansite do game Valorant e foi criado utilizando a p
 - Bootstrap
 - JavaScript
 - Node.js
-- Express.js
+  - Express.js
