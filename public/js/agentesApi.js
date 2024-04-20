@@ -33,7 +33,7 @@ async function getAgentes() {
 				agenteDiv.classList.add('agente-detalhes', 'd-flex', 'flex-column', 'flex-md-row', 'mt-5', 'pt-5', 'border-top', 'gap-md-5');
 				agenteDiv.setAttribute('id', agente.displayName);
 				agenteDiv.innerHTML = `
-					<div class="border border-1 rounded-2 bg-body-tertiary align-content-center w-auto" style="background: url('${agente.background}') no-repeat center; background-size: cover; max-width: 600px;">
+					<div class="border border-1 rounded-2 bg-body-tertiary align-content-center w-auto" style="background: url('${agente.background}') no-repeat center; background-size: contain; max-width: 600px;">
 						<img src="${agente.fullPortraitV2}" alt="${agente.displayName}" title="${agente.displayName}" class="img-fluid" />
 					</div>
 					<div class="d-flex flex-column justify-content-center justify-content-md-between align-items-center mt-4 mt-md-0">

@@ -47,9 +47,11 @@ async function getRanking() {
 				const rankingDiv = document.createElement('div');
 				rankingDiv.classList.add('ranking-detalhes', 'd-flex', 'flex-column', 'flex-md-row', 'justify-content-center', 'row-gap-3', 'row-gap-md-0', 'column-gap-md-4');
 				rankingDiv.innerHTML = `
-					<div class="text-center p-4 border border-1 rounded-2 flex-grow-1" style="background-color: #${ranking.backgroundColor == '00000000'?'ffffff':ranking.backgroundColor}; max-width: 300px;">
-						<h2 class="text-center" style="color: black; white-space: nowrap;">${ranking.tierName}</h2>
-						<img src="${ranking.largeIcon}" alt ="${ranking.tierName}" title="${ranking.tierName}" />
+					<div class="border border-1 rounded-2 bg-body-tertiary p-4">
+						<div class="text-center pt-4 px-4 flex-grow-1" style="background-color: #${ranking.backgroundColor == '00000000'?'ffffff':ranking.backgroundColor}; max-width: 300px;">
+							<h2 class="text-center" style="color: black; white-space: nowrap;">${ranking.tierName}</h2>
+							<img src="${ranking.largeIcon}" alt ="${ranking.tierName}" title="${ranking.tierName}" />
+						</div>
 					</div>
 					<div class="p-4 flex-md-grow-1 border border-1 rounded-2 bg-body-tertiary">
 						<p class="m-0">${rankingDescricao[cont]}</p>
